@@ -1,6 +1,6 @@
 {
   "name": "gcf-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable configuration module using ENV vars for cloud function apps",
   "main": "index.js",
   "scripts": {
