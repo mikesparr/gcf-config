@@ -14,6 +14,14 @@ describe("GCF Config", () => {
         expect(config).toBeInstanceOf(Config);
     });
 
+    it("throws error if missing required object", () => {
+        const testInstance = () => {
+            return new Config(undefined);
+        };
+
+        expect( testInstance ).toThrow(TypeError);
+    });
+
     describe("get", () => {
         let testConfig: IConfig<string>;
 

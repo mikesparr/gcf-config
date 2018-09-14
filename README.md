@@ -10,15 +10,18 @@ yarn add gcf-config
 # Usage
 ## Node
 ``` javascript
-const Config = require("gcf-config");
+const conf = require("gcf-config");
 
 // instantiate: assume ENV var API_KEY exists
-const config = new Config({
+const config = new conf.Config({
     apiKey: "API_KEY"
 });
 
 // access
-const url = `${someUrl}?api_key=${config.get("apiKey")}`;
+const baseUrl = `https://api.google.com`;
+const url = `${baseUrl}?api_key=${config.get("apiKey")}`;
+
+console.log(`URL: ${url}`);
 ```
 
 ## Typescript
@@ -31,7 +34,8 @@ const config: IConfig<string> = new Config({
 });
 
 // access
-const url: string = `${someUrl}?api_key=${config.get("apiKey")}`;
+const baseUrl: string = `https://api.google.com`;
+const url: string = `${baseUrl}?api_key=${config.get("apiKey")}`;
 ```
 
 # Testing

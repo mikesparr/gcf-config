@@ -13,6 +13,10 @@ export class Config implements IConfig<string> {
     constructor(mapping: {[key: string]: any}) {
         this.config = {};
 
+        if (!mapping || mapping === undefined) {
+            throw new TypeError("mapping param must be an object");
+        }
+
         Object.keys(mapping).map((key) => {
             try {
                 this.config[key] = process.env[ mapping[key] ];
