@@ -45,5 +45,8 @@
   "bugs": {
     "url": "https://github.com/mikesparr/gcf-config/issues"
   },
-  "homepage": "https://github.com/mikesparr/gcf-config#readme"
+  "homepage": "https://github.com/mikesparr/gcf-config#readme",
+  "dependencies": {
+    "@types/node": "^10.9.4"
+  }
 }
