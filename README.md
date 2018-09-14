@@ -1,5 +1,5 @@
 # GCF Config
-This is a reusable configuration module to leverage ENV vars for app configuration
+This is a reusable configuration module to leverage ENV vars for app configuration inspired by https://12factor.net/config
 
 # Installation
 ```
